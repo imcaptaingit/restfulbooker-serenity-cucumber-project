@@ -19,6 +19,7 @@ import static org.hamcrest.Matchers.hasValue;
  * Project Name: restfulbooker-serenity-cucumber-project
  */
 public class MyCURDSteps {
+
     static ValidatableResponse response;
     static int id;
     static int totalprice;

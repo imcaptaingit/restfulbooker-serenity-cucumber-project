@@ -11,7 +11,7 @@ Feature: HTTP Request Method Tests on Restful Booker
     And I verify that new booking is created by <"id">
     Examples:
       | firstName | lastName | totalprice | depositpaid | checkin    | checkout   | additionalneeds |
-      | Nik       | Caan     | 50         | yes         | 2023-10-01 | 2023-11-05 | Lunch           |
+      | BM        | Pathan   | 50         | yes         | 2023-10-01 | 2023-11-05 | Golden Biscuits |
 
   Scenario: Check if user can update an existing booking
     When I send Put request with  firstName"<firstName>", lastName"<lastName>", totalprice "<totalprice>", depositpaid "<depositpaid>", checkin "<checkin>", checkout"<checkout>" additionalneeds "<additionalneeds>"

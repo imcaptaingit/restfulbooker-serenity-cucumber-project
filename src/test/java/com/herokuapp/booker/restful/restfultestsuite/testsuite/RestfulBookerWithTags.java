@@ -44,7 +44,7 @@ public class RestfulBookerWithTags extends TestBase {
             @WithTag("restfulbooker:REGRESSION")})
     @Title("This test will return a correct response code 200 when GET request is used to get booking ids")
     @Test
-    public void verifingStatusCodeIsCorrect() {
+    public void verifyingStatusCodeIsCorrect() {
         SerenityRest.given()
                 .when()
                 .get()

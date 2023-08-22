@@ -14,7 +14,7 @@ import net.thucydides.core.annotations.Step;
  */
 public class RestfulSteps {
 
-    @Step("Getting Access Tokken")
+    @Step("Getting Access Token")
     public ValidatableResponse getTokken() {
         AuthorisationPojo authPojo = new AuthorisationPojo();
         authPojo.setUsername("admin");
@@ -29,7 +29,7 @@ public class RestfulSteps {
 
     }
 
-    @Step("Creating new booking wiht firstName : {0}, lastName: {1}, email: {2}, totalprice: {3} depositpaid: {4}, bookingdates: {5} and additonalneeds: {6}")
+    @Step("Creating new booking with firstName : {0}, lastName: {1}, email: {2}, totalprice: {3} depositpaid: {4}, bookingdates: {5} and additonalneeds: {6}")
     public ValidatableResponse createBooking(String firstname, String lastname, int totalprice, boolean depositpaid, BookingPojo.BookingDates bookingdates, String additionalneeds) {
 
         BookingPojo bookingPojo = new BookingPojo();
@@ -48,7 +48,7 @@ public class RestfulSteps {
 
     }
 
-    @Step("Getting exisiting single booking with id: {0}")
+    @Step("Getting existing single booking with id: {0}")
     public ValidatableResponse getSingleBookingIDs(int id) {
         return SerenityRest.given()
                 .pathParam("id", id)
@@ -89,11 +89,11 @@ public class RestfulSteps {
     }
 
 
-    @Step("Getting all exisiting booking ids")
+    @Step("Getting all existing booking ids")
     public ValidatableResponse getAllBookingIDs() {
         return SerenityRest.given()
                 .when().
-                get()
+                get(EndPoint.GET_All_BOOKING_BY_IDS)
                 .then().log().all();
     }
 }
